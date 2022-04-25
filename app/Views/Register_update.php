@@ -42,8 +42,8 @@
                       <label for="exampleInputStatus1" class="form-label">Status</label>
                       <select class="form-select form-select-sm" id="InputForStatus" name="status" required>
                         <option value="">=== Status User ===</option>
-                        <option>Manager</option>
-                        <option>User</option>
+                        <option value="1">Manager</option>
+                        <option value="2">User</option>
                       </select>
                       <div class="invalid-feedback">
                         Pilihan status karyawan
