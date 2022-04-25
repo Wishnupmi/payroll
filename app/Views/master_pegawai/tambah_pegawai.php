@@ -71,22 +71,26 @@
             
 
                   </div><br>
+                  
+
+
                   <div class="col-md-8">
                     <!-- <label for="exampleInputPassword1" class="form-label">Status</label> -->
                     <!-- <input type="text" class="form-control form-control-sm" name="status"> -->
                     
-                      <label for="exampleInputJabatan" class="form-label">Keikutsertaan BPJS</label>
-                      <select class="form-select form-select-sm" id="InputForJabatan" name="pbjs" required>
+                      <label for="exampleInputStatus1" class="form-label">Keikutsertaan BPJS</label>
+                      <select class="form-select form-select-sm" id="InputForStatus" name="bpjs" required>
                         <option value="">=== Pilih ikut BPJS / tidak ===</option>
-                        <option value="1">Ikut</option>
-                        <option value="2">Tidak Ikut</option>
+                        <option>Ikut</option>
+                        <option>Tidak Ikut</option>
                       </select>
                       <div class="invalid-feedback">
-                        Pilihan jabatan karyawan
+                        Pilihan status karyawan
                       </div>
             
 
                   </div>
+
                   <br><br>
                   <button type="submit" class="btn btn-sm btn-primary" style="width:150px;">Simpan</button>
                   <input type="reset" class="btn btn-sm btn-danger" style="width:150px;" value="Reset">

@@ -51,7 +51,7 @@ padding-top: 0.25em;
                 <div class="col-md-3">
                   <p><label for="start">Periode :</label></p>
 
-<input type="month" id="periode" name="periode" min="2022-04" required>
+<input type="month" id="periode" name="periode" required>
 </div>
                   
                  

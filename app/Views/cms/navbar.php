@@ -20,7 +20,7 @@
             <span data-feather="plus-circle"></span>
           </a>
       </h6>
-
+      <?php if(session()->get('status')=="2") { ?>
       <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
         <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
@@ -53,6 +53,7 @@
               <small>Data Potongan</small>
             </a>
           </li>
+          <?php } else { ?>
           <!-- <li>
           <a href="<?= base_url('/public/index.php/master_pinjaman'); ?>" class="nav-link text-white <?php if ($something=='master_pinjaman' or $something=='tambah_pinjaman' or $something=='simpan_pinjaman') { echo 'active';} ?>" aria-current="page">
               <i class="bi-reply"></i>&nbsp;
@@ -81,7 +82,7 @@
         </ul>
       </div>
 
-      
+      <?php } ?>
 
 
 

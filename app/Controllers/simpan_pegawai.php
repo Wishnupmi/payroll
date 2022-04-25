@@ -15,6 +15,8 @@ class simpan_pegawai extends BaseController
         $jabatan=$this->request->getVar('jabatan');
         $alamat=$this->request->getVar('alamat');
         $status=$this->request->getVar('status');
+        $status_bpjs=$this->request->getVar('bpjs');
+
         // if($status=='1') {
         //     $status="oke";
         // }
@@ -29,7 +31,8 @@ class simpan_pegawai extends BaseController
             'nip' => $nip,
             'jabatan' => $jabatan,
             'alamat' => $alamat,
-            'status' => $status
+            'status' => $status,
+            'status_bpjs' => $status_bpjs
         ];
         // // $uri = service('uri');
         // // $this->request->uri->getSegment(1);

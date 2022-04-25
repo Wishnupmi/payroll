@@ -26,6 +26,7 @@ class tambah_pegawai extends BaseController
         $jabatan=$this->request->getVar('jabatan');
         $alamat=$this->request->getVar('alamat');
         $status=$this->request->getVar('status');
+        $bpjs=$this->request->getVar('bpjs');
 
         $data = [
             'id_pegawai'=>$id,
@@ -33,7 +34,8 @@ class tambah_pegawai extends BaseController
             'nip'=>$nip,
             'jabatan'=>$jabatan,
             'alamat'=>$alamat,
-            'status'=>$status
+            'status'=>$status,
+            'status_bpjs'=>$bpjs
         ];
         $this->User->save($data);
         return redirect()->to('/public/index.php/master_pegawai');

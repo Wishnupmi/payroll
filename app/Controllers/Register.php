@@ -24,6 +24,7 @@ class Register extends Controller
             'password'      => 'required|min_length[6]|max_length[200]',
             'confpassword'  => 'matches[password]',
             'alamat'        => 'required|min_length[3]|max_length[200]',
+            'status'        => 'required',
         ];
          
         if($this->validate($rules)){
@@ -32,7 +33,8 @@ class Register extends Controller
                 'user_name'     => $this->request->getVar('name'),
                 'user_email'    => $this->request->getVar('email'),
                 'user_password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
-                'alamat'        => $this->request->getVar('alamat')
+                'alamat'        => $this->request->getVar('alamat'),
+                'status'        => $this->request->getVar('status')
             ];
             $model->save($data);
             return redirect()->to('public/index.php/login');

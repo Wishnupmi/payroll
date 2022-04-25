@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 24, 2022 at 02:45 AM
+-- Generation Time: Apr 25, 2022 at 01:52 PM
 -- Server version: 8.0.17
 -- PHP Version: 7.3.10
 
@@ -57,7 +57,13 @@ CREATE TABLE `data_absen` (
 --
 
 INSERT INTO `data_absen` (`id_data_absen`, `nama`, `nip`, `jabatan`, `masuk`, `alpha`, `gaji_pokok`, `uang_transport`, `uang_makan`, `tunjangan_kawin`, `potongan_ijin`, `pinjaman`, `total_gaji`, `nama_jabatan`, `sewa_motor`, `tanggal_input`, `bpjs`, `ijin`, `potongan_alpha`, `tahun`, `bulan`) VALUES
-(80, 'Wishnu', '00000001', '1', 31, 0, '1900000', 10000, 15000, 200000, 0, 0, 2874877, 'Pegawai Tetap', 0, '0000-00-00 00:00:00', 123, 0, 0, 2022, '04');
+(80, 'Wishnu', '00000001', '1', 31, 0, '1900000', 10000, 15000, 200000, 0, 0, 2874877, 'Pegawai Tetap', 0, '0000-00-00 00:00:00', 123, 0, 0, 2022, '04'),
+(81, 'Wishnu', '00000001', '3', 1, 0, '28000', 10000, 10000, 0, 0, 0, 48000, 'Sales', 0, '0000-00-00 00:00:00', 0, 0, 0, 2022, '02'),
+(82, 'Wishnu', '00000001', '4', 1, 0, '28000', 10000, 10000, 0, 0, 0, 48000, 'Pegawai Gudang', 0, '0000-00-00 00:00:00', 0, 0, 0, 2022, '03'),
+(83, 'Wishnu', '00000001', '4', 1, 0, '28000', 10000, 10000, 0, 0, 0, 0, 'Pegawai Gudang', 0, '0000-00-00 00:00:00', 0, 0, 0, 2022, '05'),
+(85, 'Wishnu', '00000001', '4', 1, 0, '28000', 10000, 10000, 0, 0, 0, 48000, 'Pegawai Gudang', 0, '0000-00-00 00:00:00', 0, 0, 0, 2022, '04'),
+(86, 'Wishnu', '00000001', '3', 1, 0, '28000', 10000, 10000, 0, 0, 0, 58000, 'Sales', 0, '0000-00-00 00:00:00', 0, 0, 0, 2022, '04'),
+(87, 'Wishnu', '00000001', '1', 1, 0, '1900000', 10000, 15000, 200000, 0, 0, 2124877, 'Pegawai Tetap', 0, '0000-00-00 00:00:00', 123, 0, 0, 2022, '08');
 
 -- --------------------------------------------------------
 
@@ -122,7 +128,7 @@ CREATE TABLE `data_pegawai` (
   `jabatan` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `alamat` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `status` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `status_bpjs` int(2) NOT NULL
+  `status_bpjs` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -130,8 +136,8 @@ CREATE TABLE `data_pegawai` (
 --
 
 INSERT INTO `data_pegawai` (`id_pegawai`, `nama`, `nip`, `jabatan`, `alamat`, `status`, `status_bpjs`) VALUES
-(12, 'Cecep', '12345678', 'Pegawai Kantor', 'Jl. Rejeki', 'Menikah', 0),
-(14, 'Wishnu', '00000001', 'Pegawai Kantor', 'Batang Jawa Tengah', 'Menikah', 0);
+(12, 'Cecep', '12345678', 'Pegawai Kantor', 'Jl. Rejeki', 'Menikah', '0'),
+(14, 'Wishnu', '00000001', 'Pegawai Kantor', 'Batang Jawa Tengah', 'Menikah', '0');
 
 -- --------------------------------------------------------
 
@@ -245,16 +251,17 @@ CREATE TABLE `users` (
   `user_email` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `user_password` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `user_created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `alamat` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+  `alamat` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `user_name`, `user_email`, `user_password`, `user_created_at`, `alamat`) VALUES
-(1, 'asas', 'as@gmail.com', '$2y$10$P.pJQWrkUYWK/8rXZrtqGebqUrbt/kpklb5xIBZ6l2oTWKCZVGqbq', '2022-04-02 22:44:44', ''),
-(4, 'wishnu', 'wishnu@gmail.com', '$2y$10$LvXZ3ywUJ3bAhTEgf2AlHuOmfC2XFeaYJVPje.ZRfDFOntWTlAgkG', '2022-04-23 16:50:16', 'Batang Jawa Tengah');
+INSERT INTO `users` (`user_id`, `user_name`, `user_email`, `user_password`, `user_created_at`, `alamat`, `status`) VALUES
+(1, 'asas', 'as@gmail.com', '$2y$10$P.pJQWrkUYWK/8rXZrtqGebqUrbt/kpklb5xIBZ6l2oTWKCZVGqbq', '2022-04-02 22:44:44', '', 2),
+(4, 'wishnu', 'wishnu@gmail.com', '$2y$10$LvXZ3ywUJ3bAhTEgf2AlHuOmfC2XFeaYJVPje.ZRfDFOntWTlAgkG', '2022-04-23 16:50:16', 'Batang Jawa Tengah', 1);
 
 --
 -- Indexes for dumped tables
@@ -322,7 +329,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `data_absen`
 --
 ALTER TABLE `data_absen`
-  MODIFY `id_data_absen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id_data_absen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT for table `data_gaji`
@@ -340,7 +347,7 @@ ALTER TABLE `data_koperasi`
 -- AUTO_INCREMENT for table `data_pegawai`
 --
 ALTER TABLE `data_pegawai`
-  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `data_pinjaman`

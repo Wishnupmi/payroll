@@ -40,7 +40,7 @@
 
 <!-- <input type="month" id="periode" name="periode" min="2022-04" required> -->
 <input type="month" id="periode" name="periode"
-       min="2018-03" value="<?= $data_absen['tahun']; ?>-<?= $data_absen['bulan']; ?>" required>
+       value="<?= $data_absen['tahun']; ?>-<?= $data_absen['bulan']; ?>" required>
 </div>
 
 
@@ -110,11 +110,11 @@
                   <br>
                   <div class="col-md-3">
                     <label for="exampleInputEmail1" class="form-label">Alpha</label>
-                    <input type="number" class="form-control form-control-sm" id="alpha" name="alpha" value="<?= $data_absen['alpha']; ?>" required>
+                    <input type="number" class="form-control form-control-sm" id="alpha" name="alpha" value="<?= $data_absen['alpha']; ?>" readonly="" required>
                   </div>
                   <div class="col-md-3">
                     <label for="exampleInputEmail1" class="form-label">Ijin</label>
-                    <input type="number" class="form-control form-control-sm" id="ijin" name="ijin" value="<?= $data_absen['ijin']; ?>" required>
+                    <input type="number" class="form-control form-control-sm" id="ijin" name="ijin" value="<?= $data_absen['ijin']; ?>" readonly="" required>
                   </div>
                   <div class="col-md-4">
                       <label for="exampleInputEmail1" class="form-label">Gaji Pokok</label>
@@ -200,13 +200,18 @@
     var jbtn  = $("#jabatan").val();
     
     if (jbtn==1) {
-        document.getElementById("alpha").disabled = false;
-        document.getElementById("ijin").disabled = false;
-        
+        // document.getElementById("alpha").disabled = false;
+        // document.getElementById("ijin").disabled = false;
+        document.getElementById('alpha').readOnly = false;
+        document.getElementById('ijin').readOnly = false;
 
       } else if (jbtn==3) {
-        document.getElementById("alpha").disabled = true;
-        document.getElementById("ijin").disabled = true;
+        // document.getElementById("alpha").readonly = true;
+        // document.getElementById("ijin").readonly = true;
+        // document.getElementById('ijin').readOnly = false;
+
+        document.getElementById('alpha').readOnly = true;
+        document.getElementById('ijin').readOnly = true;
 
         $('#potongan_alpha').val("0");
         $('#bpjs').val("");
@@ -215,6 +220,9 @@
          
       } else if (jbtn==4) {
         
+        document.getElementById('alpha').readOnly = true;
+        document.getElementById('ijin').readOnly = true;
+
         $('#potongan_alpha').val("0");
         $('#bpjs').val("");
         $('#alpha').val("0");

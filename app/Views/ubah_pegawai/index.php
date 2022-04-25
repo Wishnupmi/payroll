@@ -79,19 +79,21 @@
             
 
                   </div><br>
+                  
+
                   <div class="col-md-8">
                     <!-- <label for="exampleInputPassword1" class="form-label">Status</label> -->
                     <!-- <input type="text" class="form-control form-control-sm" name="status"> -->
                     
-                      <label for="exampleInputJabatan" class="form-label">Keikutsertaan BPJS</label>
-                      <select class="form-select form-select-sm" id="InputForJabatan" name="pbjs" required>
-                        <option value="<?= $data_pegawai['status_bpjs']; ?>"><?php if($data_pegawai['status_bpjs']=='1') { echo "Ikut"; } else { echo "Tidak ikut"; } ?></option>
-                        <option value="">=== Pilih ikut BPJS / tidak ===</option>
-                        <option value="1">Ikut</option>
-                        <option value="2">Tidak Ikut</option>
+                      <label for="exampleInputStatus1" class="form-label">Keikutsertaan BPJS</label>
+                      <select class="form-select form-select-sm" id="InputForStatus" name="bpjs" required>
+                      <option value="<?= $data_pegawai['status_bpjs']; ?>"><?php if($data_pegawai['status_bpjs']=='Ikut') { echo "Ikut"; } else { echo "Tidak ikut"; } ?></option>  
+                      <option value="">=== Pilih ikut BPJS / tidak ===</option>
+                        <option>Ikut</option>
+                        <option>Tidak Ikut</option>
                       </select>
                       <div class="invalid-feedback">
-                        Pilihan jabatan karyawan
+                        Pilihan status karyawan
                       </div>
             
 

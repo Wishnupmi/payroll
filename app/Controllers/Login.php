@@ -26,9 +26,11 @@
                      'user_id'       => $data['user_id'],
                      'user_name'     => $data['user_name'],
                      'user_email'    => $data['user_email'],
+                     'status'        => $data['status'],
                      'logged_in'     => TRUE
                  ];
                  $session->set($ses_data);
+                //  echo "Welcome back, ".$session->get('status');
                  return redirect()->to('/public/index.php/Dashboard');
              }else{
                  $session->setFlashdata('msg', 'Password Salah, Silakan ulangi lagi.');

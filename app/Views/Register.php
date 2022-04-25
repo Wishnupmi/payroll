@@ -35,6 +35,22 @@
                         <label for="InputForEmail" class="form-label col-form-label-sm">Email address</label>
                         <input type="email" name="email" class="form-control form-control-sm" id="InputForEmail" value="<?= set_value('email') ?>">
                     </div>
+                    <div class="col-md-8">
+                    <!-- <label for="exampleInputPassword1" class="form-label">Status</label> -->
+                    <!-- <input type="text" class="form-control form-control-sm" name="status"> -->
+                    
+                      <label for="exampleInputStatus1" class="form-label">Status</label>
+                      <select class="form-select form-select-sm" id="InputForStatus" name="status" required>
+                        <option value="">=== Status User ===</option>
+                        <option value="1">Manager</option>
+                        <option value="2">User</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Pilihan status karyawan
+                      </div>
+            
+
+                  </div><br>
                     <div class="mb-3">
                         <label for="InputForPassword" class="form-label col-form-label-sm">Password</label>
                         <input type="password" name="password" class="form-control form-control-sm" id="InputForPassword" value="<?= set_value('password') ?>">

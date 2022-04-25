@@ -4,5 +4,5 @@
   
  class UserModel extends Model{
      protected $table = 'users';
-     protected $allowedFields = ['user_name','user_email','user_password','user_created_at','alamat'];
+     protected $allowedFields = ['user_name','user_email','user_password','user_created_at','alamat','status'];
  }
