@@ -46,11 +46,11 @@
             </thead> -->
             <tbody>
                 <tr>
-                    <td rowspan="13" style="border:0;width:50px;"></td>
+                    <td rowspan="14" style="border:0;width:50px;"></td>
                     <td scope="row" style="width:150px;">Nama</td>
                     <td scope="row" style="width:10px;">:</td>
                     <td><?= $data_absen['nama']; ?></td>
-                    <td rowspan="13" style="border:0;width:50px;"></td>
+                    <td rowspan="14" style="border:0;width:50px;"></td>
                 </tr>
                 <tr>
                     <td scope="row">Nip</td>
@@ -106,6 +106,11 @@
                     <td scope="row">Potongan Ijin</td>
                     <td scope="row">:</td>
                     <td><?php echo "Rp " . number_format($data_absen['potongan_ijin'], 2, ",", "."); ?></td>
+                </tr>
+                <tr>
+                    <td scope="row">Potongan BPJS</td>
+                    <td scope="row">:</td>
+                    <td><?php echo "Rp " . number_format($data_absen['bpjs'], 2, ",", "."); ?></td>
                 </tr>
                 <tr>
                     <td scope="row">Total Gaji</td>

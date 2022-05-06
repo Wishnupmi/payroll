@@ -83,42 +83,13 @@ padding-top: 0.25em;
                     <th scope="col">Potongan Alpha</th>
                     <th scope="col">Potongan Ijin</th>
                     <th scope="col">Pinjaman</th>
+                    <th scope="col">BPJS</th>
                     <th scope="col">Total Gaji</th>
                     <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php 
-                    $no=1;
-                    foreach($data_absen as $data) : ?>
-                    <tr>
-                        <th scope="row"><?=$no; ?></th>
-                        <td><small><?= $data['nama']; ?></small></td>
-                        <td><?= $data['nip']; ?></td>
-                        <td><?= $data['jabatan']; ?></td>
-                        <td><?= $data['masuk']; ?></td>
-                        <td><?= $data['alpha']; ?></td>
-                        <td><?= $data['ijin']; ?></td>
-                        <td><?php echo "Rp " . number_format($data['gaji_pokok'], 2, ",", "."); ?></td>
-                        <td><?php echo "Rp " . number_format($data['uang_transport'], 2, ",", "."); ?></td>
-                        <td><?php echo "Rp " . number_format($data['uang_makan'], 2, ",", "."); ?></td>
-                        <td><?php echo "Rp " . number_format($data['tunjangan_kawin'], 2, ",", "."); ?></td>
-                        <td><?php echo "Rp " . number_format($data['potongan_alpha'], 2, ",", "."); ?></td>
-                        <td><?php echo "Rp " . number_format($data['potongan_ijin'], 2, ",", "."); ?></td>
-                        <td><?php echo "Rp " . number_format($data['pinjaman'], 2, ",", "."); ?></td>
-                        <td><?php echo "Rp " . number_format($data['total_gaji'], 2, ",", "."); ?></td>
-                        <!-- <td>
-                            <a href="<?= base_url('/public/index.php/tambah_slip_gaji/ubah/'.$data['id_data_absen']); ?>" class="btn btn-sm btn-info">Ubah</a>
-                    </td><td>    
-                            <a href="<?= base_url('/public/index.php/tambah_slip_gaji/delete/'.$data['id_data_absen']); ?>" class="btn btn-sm btn-danger">Hapus</a>
-                        </td> -->
-                        <td>    
-                            <a href="<?= base_url('/public/index.php/tambah_slip_gaji/cetak/'.$data['id_data_absen']); ?>" class="btn btn-sm btn-danger">Cetak</a>
-                        </td>
-                    </tr>
-                    <?php 
-                    $no++;
-                    endforeach; ?>
+                   
                 </tbody>
                 </table>
                 <br><br>

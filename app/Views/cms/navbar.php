@@ -53,7 +53,6 @@
               <small>Data Potongan</small>
             </a>
           </li>
-          <?php } else { ?>
           <!-- <li>
           <a href="<?= base_url('/public/index.php/master_pinjaman'); ?>" class="nav-link text-white <?php if ($something=='master_pinjaman' or $something=='tambah_pinjaman' or $something=='simpan_pinjaman') { echo 'active';} ?>" aria-current="page">
               <i class="bi-reply"></i>&nbsp;
@@ -66,6 +65,42 @@
               <small>Data Koperasi</small>
             </a>
           </li> -->
+          <li>
+          <a href="<?= base_url('/public/index.php/master_slip_gaji'); ?>" class="nav-link text-white <?php if ($something=='master_slip_gaji' or $something=='tambah_slip_gaji' or $something=='simpan_slip_gaji') { echo 'active';} ?>" aria-current="page">
+              <i class="bi-card-list"></i>&nbsp;
+              <small>Slip Gaji dan Upah</small>
+            </a>
+          </li>
+          <li>
+          <a href="<?= base_url('/public/index.php/master_rekap_gaji'); ?>" class="nav-link text-white <?php if ($something=='master_rekap_gaji') { echo 'active';} ?>" aria-current="page">
+              <i class="bi-clipboard2-data"></i>&nbsp;
+              <small>Laporan Rekap</small>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+          <?php } else { ?>
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
+        <ul class="nav nav-pills flex-column mb-auto">
+          <!-- <li>
+          <a href="<?= base_url('/public/index.php/master_pinjaman'); ?>" class="nav-link text-white <?php if ($something=='master_pinjaman' or $something=='tambah_pinjaman' or $something=='simpan_pinjaman') { echo 'active';} ?>" aria-current="page">
+              <i class="bi-reply"></i>&nbsp;
+              <small>Data Pinjaman</small>
+            </a>
+          </li>
+          <li>
+          <a href="<?= base_url('/public/index.php/master_koperasi'); ?>" class="nav-link text-white <?php if ($something=='master_koperasi' or $something=='tambah_koperasi' or $something=='simpan_koperasi') { echo 'active';} ?>" aria-current="page">
+               <i class="bi-clipboard-check"></i>&nbsp;
+              <small>Data Koperasi</small>
+            </a>
+          </li> -->
+          <li class="nav-item">
+            <a href="<?= base_url('/public/index.php/Dashboard'); ?>" class="nav-link text-white <?php if ($something=='Dashboard') { echo 'active';} ?>" aria-current="page">
+              <i class="bi-house-heart-fill"></i>&nbsp;
+              <small>Beranda</small>
+            </a>
+          </li>
           <li>
           <a href="<?= base_url('/public/index.php/master_slip_gaji'); ?>" class="nav-link text-white <?php if ($something=='master_slip_gaji' or $something=='tambah_slip_gaji' or $something=='simpan_slip_gaji') { echo 'active';} ?>" aria-current="page">
               <i class="bi-card-list"></i>&nbsp;

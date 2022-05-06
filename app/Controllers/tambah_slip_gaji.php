@@ -149,17 +149,20 @@ $data = [
         // $data['data_absen']=$this->User->getDataAbsen();
 
         $model = new AbsensiModel();
-        $dataLaporan = $model->select('nip,nama,bulan,tahun,nama_jabatan,masuk,alpha,ijin')->where('bulan',$bulan)->where('tahun',$tahun)->findAll();
+        $dataLaporan = $model->select('nip,nama,bulan,tahun,nama_jabatan,masuk,alpha,ijin,jabatan,gaji_pokok,uang_transport,uang_makan,tunjangan_kawin,potongan_alpha,potongan_ijin,pinjaman,bpjs,total_gaji,id_data_absen')->where('bulan',$bulan)->where('tahun',$tahun)->findAll();
 // $dataLaporan = $data['data_absen'] ;
 
 // $total = $model->select('nama,bulan,tahun')->where('bulan',$bulan)->where('tahun',$tahun)->count_all_results("data_absen");
 $data = [
-        'dataLaporan' => $dataLaporan,
+        // 'dataLaporan' => $dataLaporan,
+        'data_absen' => $dataLaporan,
         'bulan' => $bulan,
         'tahun' => $tahun
     ];
 
-        return view('laporan/cetakSlip',$data);
+        // return view('laporan/cetakSlip',$data);
+        return view('master_slip_gaji/index_cari',$data);
+        
     }
 
 }
